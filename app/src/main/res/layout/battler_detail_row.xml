@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/battler_name"
+            android:layout_height="wrap_content"
+            android:layout_width="75dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_marginLeft="3dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/battler_level"
+            android:layout_height="wrap_content"
+            android:layout_width="75dp"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/battler_job"
+            android:layout_height="wrap_content"
+            android:layout_width="75dp"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <CheckBox
+            android:id="@+id/battler_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="battlerSelected"/>
+    </LinearLayout>
+
+</LinearLayout>

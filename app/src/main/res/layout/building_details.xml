@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/villager_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/building_image"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp" />
+
+        <LinearLayout
+            android:id="@+id/upgrades"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="20">
+
+            <TextView
+                android:text="Upgrades"
+                android:textSize="24sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFF" />
+
+            <ListView
+                android:id="@+id/upgrade_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/actions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_below="@+id/upgrades"
+            android:layout_weight="4">
+
+            <TextView
+                android:text="Actions"
+                android:textSize="24sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFF" />
+
+            <ListView
+                android:id="@+id/action_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/destroyBuilding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Destroy "
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@+id/actions" />
+
+            <Button
+                android:id="@+id/dialogButtonOK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Ok "
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@+id/destroyBuilding" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

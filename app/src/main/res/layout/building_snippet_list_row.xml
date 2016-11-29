@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:paddingTop="4dp"
+    tools:context=".AllAppsActivity">
+
+    <LinearLayout
+        android:id="@+id/building_row"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/rawr_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="3dp"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/name_layout"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="buildingDetails"
+                android:background="@drawable/layout_selector"
+                android:clickable="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/rawr_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rawr_buildinglvl"
+                    android:paddingLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/building_progress"
+                android:layout_toRightOf="@+id/name_layout"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" />
+
+            <Button
+                android:id="@+id/bld_upgrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Upgrade"
+                android:onClick="buildingUpgradeCancel"/>
+            <Button
+                android:id="@+id/bld_cancel"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Upgrade"
+                android:onClick="buildingUpgradeCancel"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/add_building"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="0dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="4dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/layout_selector"
+        android:clickable="true"
+        android:onClick="buildNewBuilding"
+        tools:context=".AllAppsActivity">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="[+]"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
